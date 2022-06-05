@@ -1,0 +1,25 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Covid</title>
+</head>
+<body>
+
+    <h1>covid stats test</h1>
+        <table>
+            <tr>
+                <th>Location</th>
+                <th>NumberOfCases</th>
+                <th>NumberOfDeaths</th>
+            </tr>
+            <tr th:each="covidLocationStats: ${covidLocationStats}">
+                <td th:text="${covidLocationStats.location}"></td>
+                <td th:text="${covidLocationStats.numberOfCases}"></td>
+                <td th:text="${covidLocationStats.numberOfDeaths}"></td>
+            </tr>
+
+        </table>
+</body>
+</html>
